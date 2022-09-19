@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title> Welcome </title>
+    </head>
+    <body>
+
+        <form action="/IR_HW_01_respond" method="get" name="QueryForm">
+            <label for="QueryString">Query String</label>
+            <input id="QueryString" type="text" name="QueryString">
+            <input type="submit" value="Query">
+
+        </form>
+
+        <em>============================XML Sentence=============================</em><br><br>
+        {{XmlData}}
+        <br><br><em>====================XML Sliceed List=====================================</em><br><br>
+        {{XmlDataList}}
+        <br><br><em>=========================================================</em><br>
+        <em>=========================Json Sentence============================</em><br><br>
+        {{JsonData}}
+        <br><br><em>=====================Json Sliceed List====================================</em><br><br>
+        {{JsonDataList}}
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!-- hello_world.html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I come from template!!</title>
+        <style>
+            body {
+               background-color: lightyellow;
+            }
+            em {
+                color: LightSeaGreen;
+            }
+
+            table,td,tr,th {
+                background-color:whitesmoke;
+                border: 1px solid;
+
+            
+            }
+        </style>
+    </head>
+    <body>
+        <h1>IR HW 01 Processed Result!</h1>
+        <h2>Xml file result</h2>
+        <em>Total Lines : {{xmltotalLine}}</em><br>
+        <em>Total Words : {{xmltotalWord}}</em><br>
+        <em>Word ( {{QueryString}} ) Maches List : </em> <br>        
+        <table> 
+            <tr>
+                <th>No.</th>
+                <th>Line</th>
+                <th>Sequece</th>
+                <th>Full Line</th>
+            </tr>
+
+                {{xmltableContent|safe}}
+            
+        </table><br><br>
+
+        <h2>Json file result</h2>
+        <em>Total Lines : {{JsontotalLine}}</em><br>
+        <em>Total Words : {{JsontotalWord}}</em><br>
+        <em>Word ( {{QueryString}} ) Maches List : </em> <br>        
+        <table> 
+            <tr>
+                <th>No.</th>
+                <th>Line</th>
+                <th>Sequece</th>
+                <th>Full Line</th>
+            </tr>
+
+                {{JsontableContent|safe}}
+            
+        </table>
+
+        <input type="submit" name="cancel" value="上一頁" onclick="goPrev()"/>
+        <script>
+        function goPrev()
+        {
+            window.history.back();
+        }
+        </script>
+
+    </body>
+</html>
